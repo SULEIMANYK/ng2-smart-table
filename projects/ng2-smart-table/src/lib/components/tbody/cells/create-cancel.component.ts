@@ -31,6 +31,7 @@ export class TbodyCreateCancelComponent implements OnChanges {
   onCancelEdit(event: any) {
     event.preventDefault();
     event.stopPropagation();
+    this.grid.refreshData();
 
     this.row.isInEditing = false;
   }

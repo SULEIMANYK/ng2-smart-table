@@ -35,7 +35,9 @@ export class Grid {
       this.sourceOnUpdatedSubscription.unsubscribe();
     }
   }
-
+  refreshData(){
+    this.source.refresh();
+  }
   showActionColumn(position: string): boolean {
     return this.isCurrentActionsPosition(position) && this.isActionsVisible();
   }
